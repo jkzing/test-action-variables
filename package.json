@@ -1,0 +1,12 @@
+{
+  "name": "test-action-variables",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo $NPM_TOKEN && echo \"Npm build script\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

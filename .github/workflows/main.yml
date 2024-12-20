@@ -17,9 +17,9 @@ jobs:
         node-version: '20'
 
     - name: Access secrets from previous step
-      run: echo step 1 $NPM_TOKEN
+      run: npm run build
 
     - name: Set secrets to env
-      run: echo step 2 $NPM_TOKEN
+      run: npm run build
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
