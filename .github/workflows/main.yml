@@ -1,0 +1,24 @@
+name: Test Secrets
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Access secrets from previous step
+      run: echo $NPM_TOKEN
+
+    - name: Set secrets to env
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
